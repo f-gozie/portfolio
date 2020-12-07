@@ -1,5 +1,259 @@
-{% extends "portfolio/base.html" %}
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agozie's Portfolio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'portfolio/css/index.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+                <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
+            <a href="/" class="navbar-brand d-flex w-50 mr-auto">
+                <!-- <img src="{% static 'portfolio/images/logo.png' %}" alt="brand-logo" class="main-logo"> -->
+                <span class="end-hero" style="font-family: monospace;">Agozie</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume-section">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Selected Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Testimonials</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link work-button" href="#">Let's Work!</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+    </header>
 
-{% block page_content %}
-    <h1>Hello World</h1>
-{% endblock %}
+<section id="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="hero-text-container">
+                    <p class="hero-text title-hero">Hello 👋, I am </p>
+                    <h3 class="main-hero">Agozie Favour</h3>
+                    <p class="hero-text end-hero">FullStack Developer</p>
+                </div>
+            </div>
+            <div class="col">
+                <img src="{% static 'portfolio/images/david.webp' %}" alt="hero-image" class="hero-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tools-section">
+    <div class="container-fluid tools-row">
+        <img src="{% static 'portfolio/images/django.svg' %}" alt="django-logo" class="tool-image">
+        <img src="{% static 'portfolio/images/python.svg' %}" alt="python-logo" class="tool-image">
+        <img src="{% static 'portfolio/images/django_rest.svg' %}" alt="django_rest-logo" class="tool-image">
+        <img src="{% static 'portfolio/images/jquery.svg' %}" alt="jquery-logo" class="tool-image">
+        <img src="{% static 'portfolio/images/redis.svg' %}" alt="redis-logo" class="tool-image">
+        <img src="{% static 'portfolio/images/mysql.svg' %}" alt="mysql-logo" class="tool-image">
+        <img src="{% static 'portfolio/images/postgres.svg' %}" alt="postgres-logo" class="tool-image">
+        <img src="{% static 'portfolio/images/linux.svg' %}" alt="linux-logo" class="tool-image">
+        <img src="{% static 'portfolio/images/react.svg' %}" alt="react-logo" class="tool-image">
+    </div>
+</section>
+
+<section id="resume-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="section-title">Resume</h3>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-5">
+                <div class="job-details-box">
+                    <ul class="job-info-list">
+                        <li class="duration-text">SEP 2020 - DEC 2020</li>
+                        <li class="job-info-text location-text">Remote</li>
+                        <li class="job-info-text position-text">Internship</li>
+                    </ul>
+                    <span class="clearfix"></span>
+                    <p class="job-title-text">
+                        SOFTWARE DEVELOPMENT- <span class="lighter-text">SaVests</span>
+                    </p>
+                    <p class="job-description-long">
+                        I wrote clean code to develop functional web and mobile applications. I also helped to troubleshoot and debug applications, as well as wrote tests to optimize performance. I also collaborated with f rontend developers to integrate user-facing elements with server side logic. I provided training and support to non-technical teams and also built reusable code and libraries to ease subsequent development processes.
+                    </p>
+                </div>
+
+                <div class="job-spacer"></div>
+
+                <div class="job-details-box">
+                    <ul class="job-info-list">
+                        <li class="duration-text">SEPT 2017 - DEC 2018</li>
+                        <li class="job-info-text location-text">Abuja</li>
+                        <li class="job-info-text position-text">Internship</li>
+                    </ul>
+                    <span class="clearfix"></span>
+                    <p class="job-title-text">
+                        SOFTWARE DEVELOPMENT - <span class="lighter-text">NIMC</span>
+                    </p>
+                    <p class="job-description-long">
+                        I designed and developed optimized APIs. I for capturing identity records on other platforms. I also worked in collaboration with other developers in debugging already existing applications as well as implemented new features and troubleshot database related issues.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-2 resume-divider">
+                <div class="first-logo-spacer"></div>
+                <img src="{% static 'portfolio/images/cropped.svg' %}" alt="crowdforce-logo" class="cube-logo">
+                <div class="second-logo-spacer"></div>
+                <img src="{% static 'portfolio/images/rsz_gitit-tech.png' %}" alt="crowdforce-logo" class="company-logo">
+                <div class="third-logo-spacer"></div>
+                <img src="{% static 'portfolio/images/rsz_nimc.png' %}" alt="crowdforce-logo" class="cube-logo">
+                <div class="resume-button-spacer"></div>
+                <div class="view-resume-container">
+                    <a href="" class="purple-ghost-button">
+                        View My Resume
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="job-spacer-before"></div>
+                <div class="job-details-box">
+                    <ul class="job-info-list">
+                        <li class="duration-text">FEB 2019- AUG 2020</li>
+                        <li class="job-info-text location-text">Abuja</li>
+                        <li class="job-info-text position-text">Contract</li>
+                    </ul>
+                    <span class="clearfix"></span>
+                    <p class="job-title-text">
+                        SOFTWARE DEVELOPMENT- <span class="lighter-text">GitIT Technologies</span>
+                    </p>
+                    <p class="job-description-long">
+                        I wrote Python scripts to automate already existing manual processes. Refactored Python scripts and converted them to their Java alternatives to better t the stack. I also developed and implemented a skin color transfer program as well as setup and maintained the Linux servers on which our programs ran.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="section-title">My Projects 🤓</h3>
+                <p class="projects-subtitle">Few projects I have worked on as a Software Developer</p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-5">
+                <div class="project-container">
+                    <img src="{% static 'portfolio/images/identito-shot.jpg' %}" alt="identito-project-shot" class="project-image">
+                    <div class="project-info-container">
+                        <div class="name-category-box">
+                            <p class="project-name">Identito</p>
+                            <p class="category-name">Identity Verification</p>
+                        </div>
+                        <div class="technologies-box">
+                            <ul class="technologies-list">
+                                <li class="yellow-full">Vanilla JS</li>
+                                <li class="purple-full">Bootstrap</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-container">
+                    <a href="https://neue.ajawudavid.tech/" target="_blank">
+                        <img src="{% static 'portfolio/images/neue-shot.jpg' %}" alt="neue-project-shot" class="project-image">
+                    </a>
+                    <div class="project-info-container">
+                        <div class="name-category-box">
+                            <p class="project-name">Neue Art Store</p>
+                            <p class="category-name">E-Commerce</p>
+                        </div>
+                        <div class="technologies-box">
+                            <ul class="technologies-list">
+                                <li class="docker-blue">Docker</li>
+                                <li class="green-full">Django</li>
+                                <li class="gray-full">+2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 project-divider">
+                <div class="project-button-spacer"></div>
+                <div class="view-resume-container">
+                    <a href="" class="purple-ghost-button">
+                        More Projects
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="project-container">
+                    <img src="{% static 'portfolio/images/ogani-shot.jpg' %}" alt="ogani-project-shot" class="project-image">
+                    <div class="project-info-container">
+                        <div class="name-category-box">
+                            <p class="project-name">Neue Art Store</p>
+                            <p class="category-name">E-Commerce</p>
+                        </div>
+                        <div class="technologies-box">
+                            <ul class="technologies-list">
+                                <li class="blue-full">Jquery</li>
+                                <li class="green-full">Django</li>
+                                <li class="gray-full">+2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-container">
+                    <img src="{% static 'portfolio/images/buyblinds-shot.jpg' %}" alt="buyblinds-project-shot" class="project-image">
+                    <div class="project-info-container">
+                        <div class="name-category-box">
+                            <p class="project-name">BuyBlinds</p>
+                            <p class="category-name">E-Commerce</p>
+                        </div>
+                        <div class="technologies-box">
+                            <ul class="technologies-list">
+                                <li class="react-blue">React</li>
+                                <li class="green-full">DRF</li>
+                                <li class="gray-full">+3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- jQuery and JS bundle w/ Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+</html>

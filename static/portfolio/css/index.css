@@ -1,0 +1,357 @@
+/* ----------------------------------------------- */
+/* ----------------- GENERAL SETUP --------------- */
+/* ----------------------------------------------- */
+
+html, body{
+    scroll-behavior: smooth;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #7f7f7f;
+}
+
+/* ----------------------------------------------- */
+/* ---------------- HEADER SECTION --------------- */
+/* ----------------------------------------------- */
+
+/* ---------------- NAVBAR --------------- */
+header {
+    background-color: #F8F8F8;
+}
+
+.navbar {
+    padding: .5rem 0;
+}
+
+.main-logo {
+    height: 30px;
+}
+
+.nav-link {
+    font-size: 80%;
+    margin-right: 10px;
+    color: #636466 !important;
+}
+
+.work-button {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,32,121,1) 55%, rgba(0,212,255,1) 100%);
+    color: #fff !important;
+    display: inline-block;
+    padding: 9px 18px !important;
+    margin: 0 !important;
+}
+
+/* ---------------- HERO SECTION --------------- */
+.hero-text-container {
+    margin: 150px 0 110px;
+}
+
+.title-hero {
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 0.4rem;
+}
+
+.main-hero {
+    font-size: 350%;
+    font-weight: 700;
+    /*background: linear-gradient(180deg, #FF0000 0%, #5D216A 100%);*/
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,32,121,1) 55%, rgba(0,212,255,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.end-hero {
+    text-transform: uppercase;
+    color: #0F519D;
+}
+
+.tools-row {
+    background-color: #F8F8F8;
+    padding: 25px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tool-image {
+    padding: 0 45px;
+    max-height: 53px;
+}
+
+.hero-image {
+    margin: 80px 0 30px;
+    display: block;
+    height: 380px;
+    width: auto;
+}
+
+/* ----------------------------------------------- */
+/* ---------------- RESUME SECTION --------------- */
+/* ----------------------------------------------- */
+#resume-section {
+    margin: 100px 0 80px;
+}
+
+.section-title {
+    font-weight: 600;
+    color: #0F519D;
+    font-size: 100%;
+    text-transform: uppercase;
+}
+
+.job-details-box {
+    margin-top: 60px;
+}
+
+.job-info-list {
+    display: inline;
+    float: left;
+    padding: 0;
+}
+
+.job-info-list li {
+    display: inline-block;
+}
+
+.duration-text {
+    font-weight: 700;
+    font-size: 70%;
+    line-height: 15px;
+    color: #5D216A;
+}
+
+.job-info-text {
+    font-weight: 600;
+    font-size: 70%;
+    line-height: 15px;
+    letter-spacing: 1.5px;
+}
+
+.job-info-text::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #0F519D; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin: 0 25px;
+}
+
+.location-text {
+    color: #0D696C;
+}
+
+.position-text {
+    color: #000000;
+}
+
+.job-title-text {
+    color: #000;
+    font-size: 70%;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 1.5px;
+}
+
+.lighter-text {
+    font-weight: 600;
+    font-size: 100%;
+}
+
+.job-description-long {
+    color: #000;
+    font-weight: 300;
+    text-align: justify;
+    font-size: 70%;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+}
+
+.clearfix{ zoom: 1 }
+.clearfix:after {
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.purple-ghost-button:link,
+.purple-ghost-button:visited {
+    color: #5D216A;
+    border: 2px solid #8a319e;
+    font-size: 70%;
+    line-height: 18px;
+    font-weight: bold;
+    padding: 11px 13px;
+    letter-spacing: 0.3px;
+    transition: background-color 0.4s, color 0.4s, border 0.4s;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.purple-ghost-button:hover,
+.purple-ghost-button:active {
+    text-decoration: none;
+    color: #fff;
+    background-color: #5D216A;
+    border: 2px solid #5D216A;
+}
+
+.job-spacer {
+    margin: 385px 0;
+}
+
+.job-spacer-before {
+    margin: 310px 0;
+}
+
+.resume-divider {
+    background-image: url(../images/divider.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-logo {
+    height: 48px;
+}
+
+.cube-logo {
+    height: 54px;
+}
+
+.first-logo-spacer {
+    margin: 25px 0;
+}
+
+.second-logo-spacer {
+    margin: 38px 0;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.third-logo-spacer {
+    margin: 152px 0;
+}
+
+.resume-button-spacer {
+    margin: 120px 0;
+}
+
+/* ----------------------------------------------- */
+/* ---------------- PROJECT SECTION --------------- */
+/* ----------------------------------------------- */
+
+.projects-subtitle {
+    font-weight: 400;
+    font-size: 70%;
+    color: #636466;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+}
+
+.project-image {
+    width: 477px;
+    max-width: 100%;
+    height: auto;
+}
+
+.project-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-button-spacer {
+    margin: 410px 0;
+}
+
+.project-container {
+    margin-bottom: 20px;
+}
+
+.name-category-box {
+    font-size: 70%;
+    line-height: 25px;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    width: 50%;
+}
+
+.technologies-box {
+    display: inline-block;
+    width: 50%;
+    float: right;
+}
+
+.project-name {
+    margin-top: 20px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.category-name {
+    font-weight: 300;
+    color: #0F519D;
+}
+
+.technologies-list {
+    display: inline-block;
+    list-style: none;
+    float: right;
+    margin-top: 25px;
+}
+
+.technologies-list li {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 60%;
+    line-height: 25px;
+    letter-spacing: 1.5px;
+    padding: 0 8px;
+}
+
+.red-full {
+    background: rgba(255, 0, 0, 0.25);
+    color: #FF0000;
+}
+
+.purple-full {
+    background: rgba(93, 33, 106, 0.35);
+    color: #5D216A;
+}
+
+.gray-full {
+    background: rgba(196, 196, 196, 0.34);
+    color: #000;
+}
+
+.yellow-full {
+    background: rgba(240, 219, 79, 0.9);
+    color: #323330;
+}
+
+.blue-full {
+    background: rgba(105, 203, 247, 0.4);
+    color: #1956AF;
+}
+
+.green-full {
+    background: rgba(0, 202, 149, 0.7);
+    color: #005133;
+}
+
+.docker-blue {
+    background: rgba(74, 140, 244, 0.5);
+    color: #362FCF;
+}
+
+.react-blue {
+    background: rgba(58, 216, 233, 0.9);
+    color: #20222A;
+}
