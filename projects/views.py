@@ -1,9 +1,25 @@
+import os
+
 from django.shortcuts import render
+from django.views.generic import TemplateView
+from django.views import View
+from django.conf import settings
+from django.http import HttpResponse,Http404
+
 from .models import Project
 
-# Create your views here.
-def index(request):
-	return render(request, "portfolio/index.html")
+class IndexView(TemplateView):
+	template_name = "portfolio/index.html"
+
+class ResumeView(View):
+
+	# GET requests
+	def get(self, request):
+		resume_path = settings.MEDIA_ROOT + 'documents/Agozie Favour Resume.pdf'
+		if os.path.exists(resume_path):
+			with open(resume_path, 'rb') as resume:
+				response = HttpResponse(resume.read(), 'application/pdf')
+				response['Content-Disposition'] = 'filename=Agozie Favour Resume.pdf'
 
 def overview(request):
 	projects = Project.objects.all()

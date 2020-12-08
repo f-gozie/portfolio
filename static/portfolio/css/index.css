@@ -355,3 +355,16 @@ header {
     background: rgba(58, 216, 233, 0.9);
     color: #20222A;
 }
+
+/* ----------------------------------------------- */
+/* ---------------- GENERAL SECTION --------------- */
+/* ----------------------------------------------- */
+
+.reg-link {
+    color: inherit;
+    text-decoration: none!important;
+}
+
+.reg-link:hover {
+    color: #0F519D;
+}
