@@ -13,13 +13,15 @@ class IndexView(TemplateView):
 
 class ResumeView(View):
 
-	# GET requests
+	# GET request
 	def get(self, request):
-		resume_path = settings.MEDIA_ROOT + 'documents/Agozie Favour Resume.pdf'
+		resume_path = settings.MEDIA_ROOT + '/documents/Agozie Favour Resume.pdf'
 		if os.path.exists(resume_path):
 			with open(resume_path, 'rb') as resume:
 				response = HttpResponse(resume.read(), 'application/pdf')
 				response['Content-Disposition'] = 'filename=Agozie Favour Resume.pdf'
+				return response
+		raise Http404
 
 def overview(request):
 	projects = Project.objects.all()
