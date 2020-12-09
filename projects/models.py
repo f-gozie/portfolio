@@ -10,3 +10,8 @@ class Project(models.Model):
 
 	def __str__(self):
 		return self.title
+
+class Contact(models.Model):
+	name = models.CharField(max_length=50, blank=False)
+	email_address = models.EmailField(blank=False)
+	message = models.TextField(blank=False)

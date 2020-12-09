@@ -20,7 +20,7 @@ header {
 }
 
 .navbar {
-    padding: .5rem 0;
+    padding: 0.6rem 0;
 }
 
 .main-logo {
@@ -37,8 +37,8 @@ header {
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,32,121,1) 55%, rgba(0,212,255,1) 100%);
     color: #fff !important;
     display: inline-block;
-    padding: 9px 18px !important;
-    margin: 0 !important;
+    padding: 8px 17px !important;
+    margin: 3px 0 0 !important;
 }
 
 /* ---------------- HERO SECTION --------------- */
@@ -247,7 +247,7 @@ header {
 /* ----------------------------------------------- */
 
 #projects-section {
-    padding: 30px 0;
+    padding: 30px 0 50px;
 }
 
 .projects-subtitle {
@@ -368,7 +368,7 @@ header {
 }
 
 .comment-half {
-    background: #5D216A;
+    background: #050C44;
     padding: 110px 0 40px;
     border: 1px solid #000;
 }
@@ -498,7 +498,7 @@ header {
 }
 
 .contact-submit-button {
-    background: linear-gradient(180deg, #FF0000 0%, #5D216A 100%);
+    background: linear-gradient(90deg, rgba(7,15,80,1) 76%, rgba(2,0,36,1) 100%, rgba(9,32,121,1) 100%, rgba(0,212,255,1) 100%);
     color: #fff;
     font-size: 70%;
     letter-spacing: 0.3px;
