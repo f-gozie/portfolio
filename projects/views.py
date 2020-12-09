@@ -1,10 +1,12 @@
 import os
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, FormView
 from django.views import View
+from django.urls import reverse
 from django.conf import settings
 from django.http import HttpResponse,Http404, JsonResponse
+from django.core.mail import send_mail
 
 from .models import Project
 from .forms import ContactForm
@@ -28,18 +30,19 @@ class ContactMeView(FormView):
 	form_class = ContactForm
 
 	def form_valid(self, form):
-		send_response = send_mail(
-				"Contact Form",
-				form.message,
-				'no-reply@mg.agoziefavour.tech',
-				['fagozie43@gmail.com'])
-		if send_response:
-			return JsonResponse({'success': True, 'message':'Thank you for reaching out. I will send you an email soon'})
-		else:
-			return JsonResponse({'success': False, 'message':'Email could not be sent. Is the specified email address correct?'})
+		message = form.cleaned_data.get('message')
+		to_email = form.cleaned_data.get('email')
+		form.save()
+		send_mail("Contact Me Form", message, 'no-reply@mg.agoziefavour.tech', [to_email])
+		return redirect('portfolio:index')
+		# send_response = send_mail("Contact Me Form", message, 'no-reply@mg.agoziefavour.tech', [to_email])
+		# if send_response:
+		# 	return JsonResponse({'success': True, 'message':'Thank you for reaching out. I will send you an email soon'})
+		# else:
+		# 	return JsonResponse({'success': False, 'message':'Email could not be sent. Is the specified email address correct?'})
 
 	def form_invalid(self, form):
-		return JsonResponse({'success': False, 'errors':form.errors.as_json()})
+		return JsonResponse({'success': False, 'errors':form.errors})
 
 
 # def overview(request):
