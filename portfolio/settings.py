@@ -31,6 +31,10 @@ DEBUG = config("DEBUG", cast=bool)
 
 ALLOWED_HOSTS = []
 
+# Email settings
+EMAIL_BACKEND = config('EMAIL_BACKEND')
+MAILGUN_ACCESS_KEY = config('MAILGUN_ACCESS_KEY')
+MAILGUN_SERVER_NAME = config('MAILGUN_SERVER_NAME')
 
 # Application definition
 

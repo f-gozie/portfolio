@@ -1,5 +1,5 @@
 [ ] - Convert detail view to a Class Based View
-[ ] - Create mailgun/sendgrid account and integrate
+[*] - Create mailgun/sendgrid account and integrate
 [ ] - Update the ContactMeView view
 [ ] - Fix "CSRF Verification failed bug"
 [ ] - Update the projects section with current projects
@@ -9,4 +9,4 @@
 [ ] - Add profile picture
 [ ] - Fix GitIT svg and replace cube.svg with it
 [*] - Hide enviroment variables using python-decouple
-[ ] - Update heroku to track environment variables
+[*] - Update heroku to track environment variables
