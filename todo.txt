@@ -5,6 +5,7 @@
 [ ] - Deploy other related projects and add their subdomains
 [ ] - Add profile picture
 [ ] - Fix GitIT svg and replace cube.svg with it
+[ ] - Use fetch request over AJAX for better error handling
 [*] - Replace index redirect to AJAX request after successful form submission
 [*] - Hide enviroment variables using python-decouple
 [*] - Update heroku to track environment variables
