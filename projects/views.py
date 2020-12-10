@@ -32,9 +32,9 @@ class ContactMeView(FormView):
 	def form_valid(self, form):
 		message = form.cleaned_data.get('message')
 		to_email = form.cleaned_data.get('email')
-		form.save()
 		send_response = send_mail("Contact Me Form", message, 'no-reply@mg.agoziefavour.tech', [to_email])
 		if send_response:
+			form.save()
 			return JsonResponse({'success': True, 'message':'Thank you for reaching out. I will send you an email soon'})
 		else:
 			return JsonResponse({'success': False, 'message':'Email could not be sent. Is the specified email address correct?'})

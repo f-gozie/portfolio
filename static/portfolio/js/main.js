@@ -20,7 +20,7 @@ const submit_form = () => {
 			$('#message').val('');
 			$('#response').prepend("<strong>" + json.message + "</strong>");
 			setTimeout(function() {
-				$('#response').fadeOut().empty();
+				document.getElementById('response').style.visibility = 'hidden';
 			}, 5000);
 		},
 
