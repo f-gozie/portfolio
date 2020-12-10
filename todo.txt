@@ -1,13 +1,13 @@
 [ ] - Convert detail view to a Class Based View
-[ ] - Fix "CSRF Verification failed bug"
 [ ] - Update the projects section with current projects
 [ ] - Create Dockerfile
 [ ] - Setup hosting for Digital Ocean
 [ ] - Deploy other related projects and add their subdomains
 [ ] - Add profile picture
 [ ] - Fix GitIT svg and replace cube.svg with it
-[ ] - Replace index redirect to AJAX request after successful form submission
+[*] - Replace index redirect to AJAX request after successful form submission
 [*] - Hide enviroment variables using python-decouple
 [*] - Update heroku to track environment variables
 [*] - Create mailgun/sendgrid account and integrate
 [*] - Update the ContactMeView view
+[*] - Fix "CSRF Verification failed bug"

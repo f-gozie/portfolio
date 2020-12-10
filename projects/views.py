@@ -33,16 +33,14 @@ class ContactMeView(FormView):
 		message = form.cleaned_data.get('message')
 		to_email = form.cleaned_data.get('email')
 		form.save()
-		send_mail("Contact Me Form", message, 'no-reply@mg.agoziefavour.tech', [to_email])
-		return redirect('portfolio:index')
-		# send_response = send_mail("Contact Me Form", message, 'no-reply@mg.agoziefavour.tech', [to_email])
-		# if send_response:
-		# 	return JsonResponse({'success': True, 'message':'Thank you for reaching out. I will send you an email soon'})
-		# else:
-		# 	return JsonResponse({'success': False, 'message':'Email could not be sent. Is the specified email address correct?'})
+		send_response = send_mail("Contact Me Form", message, 'no-reply@mg.agoziefavour.tech', [to_email])
+		if send_response:
+			return JsonResponse({'success': True, 'message':'Thank you for reaching out. I will send you an email soon'})
+		else:
+			return JsonResponse({'success': False, 'message':'Email could not be sent. Is the specified email address correct?'})
 
 	def form_invalid(self, form):
-		return JsonResponse({'success': False, 'errors':form.errors})
+		return JsonResponse({'error': False, 'errors':form.errors})
 
 
 # def overview(request):
